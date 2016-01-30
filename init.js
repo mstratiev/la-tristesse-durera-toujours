@@ -3,14 +3,14 @@
 var gogh = (function(){
 
     var counts = {
-        a: 67,
-        d: 50,
+        a: 66,
+        d: 49,
         e: 36,
         j: 43,
         i: 32,
         l: 31,
         o: 42,
-        r: 56,
+        r: 55,
         s: 52,
         t: 37,
         u: 31

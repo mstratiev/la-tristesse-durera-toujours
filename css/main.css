@@ -15,6 +15,7 @@ span {
   box-sizing: border-box;
 }
 #content img {
+  min-height: 69px;
   max-height: 70px;
 }
 #content .word {
