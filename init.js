@@ -1,6 +1,13 @@
 ! function() {
 
 var gogh = (function(){
+    jQuery(document).ready(function($) {
+        setTimeout(function(){
+
+        $('#content').css({
+    opacity:1})
+        },500)
+    });
 
     var counts = {
         a: 66,
@@ -24,7 +31,7 @@ var gogh = (function(){
         if (r.length == 1) {
             r = '0' + r;
         };
-        return letter+'/'+ letter + '_' + r + '.jpg';
+        return letter+'/'+ letter + '_' + r;
     };
     var parse = function(word) {
         var result = [],
@@ -41,7 +48,7 @@ var gogh = (function(){
         durera: parse('durera'),
         toujours: parse('toujours')
     };
-    var template = '{{#each words}}<div class="word" id="{{@key}}">{{#each letters}}<img src="img/{{this}}"/>{{/each}}</div>{{/each}}'
+    var template = '{{#each words}}<div class="word" id="{{@key}}">{{#each letters}}<a href="#"><img src="img/{{this}}.jpg"/></a>{{/each}}</div>{{/each}}'
     var temp = Handlebars.compile(template);
     $('#content').html(temp({"words":data}))
 
